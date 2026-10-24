@@ -538,20 +538,25 @@
             lucide.createIcons();
         }
 
-        // Mock Download Trigger
+        // Updated Download Trigger linking to Google Drive
         function downloadJar(filename, version) {
-            const dummyContent = `SourClient Minecraft Mod File - Version ${version}\nBuilt for Fabric Loader.\nFilename: ${filename}`;
-            const blob = new Blob([dummyContent], { type: 'application/java-archive' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = filename;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
+            let url = '';
+            if (version === '1.21.11') {
+                url = 'https://drive.google.com/uc?export=download&id=1TOGKIjRu3c7uEGaLcCIZ93wEJwqqTLxx';
+            } else if (version === '26.1.2') {
+                url = 'https://drive.google.com/uc?export=download&id=1cQN7P5YtCFq-iimJ8oJ6f0K1vOTcvbwZ';
+            }
 
-            showToast(`Started download: ${filename} (MC ${version})`);
+            if (url) {
+                const a = document.createElement('a');
+                a.href = url;
+                a.target = '_blank';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+
+                showToast(`Opening download: ${filename} (MC ${version})`);
+            }
         }
 
         // Toast Notifications
