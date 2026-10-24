@@ -49,22 +49,6 @@
         .glow-effect {
             box-shadow: 0 0 35px -5px rgba(34, 197, 94, 0.25);
         }
-        .glow-effect-lg {
-            box-shadow: 0 0 60px -10px rgba(132, 204, 22, 0.3);
-        }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0f140f;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #22c55e33;
-            border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #22c55e88;
-        }
         .glass-panel {
             background: rgba(18, 24, 18, 0.75);
             backdrop-filter: blur(12px);
@@ -87,6 +71,19 @@
 
     <!-- Background Grid Effect -->
     <div class="fixed inset-0 pointer-events-none opacity-20 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
+    <!-- Top Discord Announcement Banner -->
+    <div class="bg-gradient-to-r from-indigo-900/80 via-purple-900/80 to-sour-950/80 border-b border-indigo-500/30 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium relative z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            <span class="flex items-center gap-1.5 font-semibold text-indigo-300">
+                <i data-lucide="message-square" class="w-4 h-4 text-indigo-400"></i> Join the SourClient Community!
+            </span>
+            <span class="hidden sm:inline text-gray-400">• Get updates, report bugs, and chat with developers.</span>
+            <a href="https://discord.gg/GqBeTTptM6" target="_blank" rel="noopener noreferrer" class="ml-1 px-3 py-1 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-bold text-xs transition-all shadow-md shadow-indigo-600/30 flex items-center gap-1">
+                Join Discord <i data-lucide="external-link" class="w-3 h-3"></i>
+            </a>
+        </div>
+    </div>
 
     <!-- Navigation Header -->
     <header class="sticky top-0 z-40 glass-panel border-b border-sour-500/10">
@@ -116,16 +113,19 @@
                     <a href="#features" class="text-sm font-medium text-gray-300 hover:text-sour-400 transition-colors flex items-center gap-1.5">
                         <i data-lucide="grid" class="w-4 h-4"></i> Modules & Features
                     </a>
-                    <a href="#structure" class="text-sm font-medium text-gray-300 hover:text-sour-400 transition-colors flex items-center gap-1.5">
-                        <i data-lucide="folder-tree" class="w-4 h-4"></i> Package Inspector
-                    </a>
                     <a href="#installation" class="text-sm font-medium text-gray-300 hover:text-sour-400 transition-colors flex items-center gap-1.5">
                         <i data-lucide="book-open" class="w-4 h-4"></i> Guide
+                    </a>
+                    <a href="https://discord.gg/GqBeTTptM6" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1.5">
+                        <i data-lucide="message-square" class="w-4 h-4"></i> Discord
                     </a>
                 </nav>
 
                 <!-- Quick Action Button -->
                 <div class="hidden sm:flex items-center space-x-3">
+                    <a href="https://discord.gg/GqBeTTptM6" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30 font-bold text-sm transition-all flex items-center gap-2">
+                        <i data-lucide="message-square" class="w-4 h-4 text-indigo-400"></i> Discord
+                    </a>
                     <a href="#downloads" class="px-5 py-2.5 rounded-xl bg-sour-500 hover:bg-sour-400 text-black font-bold text-sm transition-all duration-200 transform hover:scale-105 shadow-lg shadow-sour-500/20 flex items-center gap-2">
                         <i data-lucide="arrow-down-circle" class="w-4 h-4"></i> Get Client
                     </a>
@@ -142,8 +142,8 @@
         <div id="mobile-menu" class="hidden md:hidden border-b border-sour-500/10 bg-darkbg/95 px-4 pt-2 pb-6 space-y-3">
             <a href="#downloads" class="block py-2 text-base font-medium text-gray-300 hover:text-sour-400">Downloads</a>
             <a href="#features" class="block py-2 text-base font-medium text-gray-300 hover:text-sour-400">Modules & Features</a>
-            <a href="#structure" class="block py-2 text-base font-medium text-gray-300 hover:text-sour-400">Package Inspector</a>
             <a href="#installation" class="block py-2 text-base font-medium text-gray-300 hover:text-sour-400">Guide</a>
+            <a href="https://discord.gg/GqBeTTptM6" target="_blank" rel="noopener noreferrer" class="block py-2 text-base font-medium text-indigo-400 hover:text-indigo-300">Join Discord Server</a>
         </div>
     </header>
 
@@ -169,8 +169,8 @@
                         <a href="#downloads" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-sour-500 to-sour-600 hover:from-sour-400 hover:to-sour-500 text-black font-extrabold text-base shadow-xl shadow-sour-500/25 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
                             <i data-lucide="download" class="w-5 h-5"></i> Download Jars
                         </a>
-                        <a href="#features" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cardbg hover:bg-borderbg border border-sour-500/20 text-white font-semibold text-base transition-all duration-200 flex items-center justify-center gap-3">
-                            <i data-lucide="layers" class="w-5 h-5 text-sour-400"></i> Explore 45+ Modules
+                        <a href="https://discord.gg/GqBeTTptM6" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/30 text-indigo-200 font-semibold text-base transition-all duration-200 flex items-center justify-center gap-3">
+                            <i data-lucide="message-square" class="w-5 h-5 text-indigo-400"></i> Discord Community
                         </a>
                     </div>
 
@@ -181,8 +181,8 @@
                             <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Active Modules</div>
                         </div>
                         <div class="p-4 rounded-xl bg-cardbg/40 border border-sour-500/10">
-                            <div class="text-3xl font-extrabold text-sour-400">5</div>
-                            <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Core Categories</div>
+                            <div class="text-3xl font-extrabold text-sour-400">6</div>
+                            <div class="text-xs text-gray-400 mt-1 uppercase tracking-wider font-semibold">Module Categories</div>
                         </div>
                         <div class="p-4 rounded-xl bg-cardbg/40 border border-sour-500/10">
                             <div class="text-3xl font-extrabold text-sour-400">1.21.11</div>
@@ -202,7 +202,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Available Client Builds</h2>
-                    <p class="mt-3 text-gray-400 max-w-2xl mx-auto">Select the build matching your Minecraft target version. Both JAR files are compiled and optimized for Fabric.</p>
+                    <p class="mt-3 text-gray-400 max-w-2xl mx-auto">Select the build matching your Minecraft target version. Both JAR files are compiled and optimized for Fabric Loader.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -235,7 +235,7 @@
                         </button>
                     </div>
 
-                    <!-- Build 2: Build 26.1.2 -->
+                    <!-- Build 2: Build 1.0.0+26.1.2 -->
                     <div class="glass-panel p-8 rounded-2xl relative flex flex-col justify-between border-sour-500/20 hover:border-sour-400/50 transition-all">
                         <div class="absolute top-4 right-4 bg-gray-800 text-gray-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                             Special Build
@@ -246,7 +246,7 @@
                                     <i data-lucide="file-code-2" class="w-8 h-8"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-white">sourclient-26.1.2.jar</h3>
+                                    <h3 class="text-xl font-bold text-white">sourclient-1.0.0+26.1.2.jar</h3>
                                     <p class="text-xs text-gray-400 font-mono">Build MC 26.1.2</p>
                                 </div>
                             </div>
@@ -254,13 +254,13 @@
                                 Compatibility jar tailored for release +26.1.2 protocol environments. Includes identical internal Mixins, custom fonts, and module hooks.
                             </p>
                             <div class="space-y-2 mb-8 text-xs font-mono text-gray-400 bg-darkbg/80 p-3 rounded-lg border border-sour-500/10">
-                                <div class="flex justify-between"><span>File:</span> <span class="text-gray-200">sourclient-26.1.2.jar</span></div>
+                                <div class="flex justify-between"><span>File:</span> <span class="text-gray-200">sourclient-1.0.0+26.1.2.jar</span></div>
                                 <div class="flex justify-between"><span>Minecraft:</span> <span class="text-sour-400">26.1.2</span></div>
                                 <div class="flex justify-between"><span>Loader:</span> <span class="text-gray-200">Fabric Loader &gt;=0.15.0</span></div>
                             </div>
                         </div>
-                        <button onclick="downloadJar('sourclient-26.1.2.jar', '26.1.2')" class="w-full py-3.5 px-4 rounded-xl bg-cardbg hover:bg-borderbg border border-sour-500/30 text-white font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2">
-                            <i data-lucide="download-cloud" class="w-5 h-5 text-sour-400"></i> Download sourclient-26.1.2.jar
+                        <button onclick="downloadJar('sourclient-1.0.0+26.1.2.jar', '26.1.2')" class="w-full py-3.5 px-4 rounded-xl bg-cardbg hover:bg-borderbg border border-sour-500/30 text-white font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2">
+                            <i data-lucide="download-cloud" class="w-5 h-5 text-sour-400"></i> Download sourclient-1.0.0+26.1.2.jar
                         </button>
                     </div>
                 </div>
@@ -273,7 +273,7 @@
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
                     <div>
                         <h2 class="text-3xl font-black text-white">Modules & Features Index</h2>
-                        <p class="text-gray-400 mt-2">Extracted directly from client class files in <span class="font-mono text-sour-400">com.sourclient.modules.*</span></p>
+                        <p class="text-gray-400 mt-2">Comprehensive breakdown of all features included in <span class="font-mono text-sour-400">SourClient</span></p>
                     </div>
                     
                     <!-- Search Input -->
@@ -286,19 +286,22 @@
                 <!-- Category Filters -->
                 <div class="flex flex-wrap gap-2 mb-8" id="category-tabs">
                     <button data-cat="all" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-sour-500 text-black shadow-md shadow-sour-500/20 transition-all">
-                        All Modules (45)
+                        All Modules (47)
                     </button>
                     <button data-cat="combat" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cardbg text-gray-400 border border-sour-500/10 hover:border-sour-500/30 transition-all">
                         Combat (10)
                     </button>
                     <button data-cat="render" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cardbg text-gray-400 border border-sour-500/10 hover:border-sour-500/30 transition-all">
-                        Render & ESP (15)
+                        Render & ESP (13)
                     </button>
                     <button data-cat="player" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cardbg text-gray-400 border border-sour-500/10 hover:border-sour-500/30 transition-all">
-                        Player & Movement (11)
+                        Player & Movement (10)
                     </button>
                     <button data-cat="new" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cardbg text-gray-400 border border-sour-500/10 hover:border-sour-500/30 transition-all">
-                        New & Automation (11)
+                        New & Automation (7)
+                    </button>
+                    <button data-cat="world" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cardbg text-gray-400 border border-sour-500/10 hover:border-sour-500/30 transition-all">
+                        World (4)
                     </button>
                     <button data-cat="misc" class="cat-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cardbg text-gray-400 border border-sour-500/10 hover:border-sour-500/30 transition-all">
                         Misc & HUD (3)
@@ -312,67 +315,8 @@
             </div>
         </section>
 
-        <!-- Zip Archive / Package Tree Inspector -->
-        <section id="structure" class="py-20 bg-cardbg/20 border-t border-sour-500/10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-black text-white">ZIP Package & Class Directory</h2>
-                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Full interactive directory listing extracted from the Jar/Zip folder archive manifest.</p>
-                </div>
-
-                <div class="grid lg:grid-cols-12 gap-8">
-                    <!-- Tree View Left Side -->
-                    <div class="lg:col-span-5 glass-panel p-6 rounded-2xl max-h-[550px] overflow-y-auto custom-scrollbar">
-                        <div class="flex items-center justify-between pb-4 mb-4 border-b border-sour-500/10">
-                            <span class="text-sm font-bold text-white flex items-center gap-2">
-                                <i data-lucide="archive" class="w-4 h-4 text-sour-400"></i> sourclient.jar
-                            </span>
-                            <span class="text-xs font-mono text-gray-400">Fabric Jar Structure</span>
-                        </div>
-                        <div id="file-tree" class="font-mono text-xs space-y-1">
-                            <!-- Populated by JS -->
-                        </div>
-                    </div>
-
-                    <!-- Details Inspector Right Side -->
-                    <div class="lg:col-span-7 flex flex-col justify-between glass-panel p-6 rounded-2xl border-sour-500/20">
-                        <div>
-                            <div class="flex items-center justify-between pb-4 mb-4 border-b border-sour-500/10">
-                                <span class="text-sm font-bold text-white flex items-center gap-2">
-                                    <i data-lucide="terminal" class="w-4 h-4 text-sour-400"></i> File Inspector
-                                </span>
-                                <span id="selected-file-tag" class="text-xs font-mono bg-sour-500/10 text-sour-400 border border-sour-500/20 px-2 py-0.5 rounded">Select a file</span>
-                            </div>
-
-                            <div id="inspector-content" class="text-sm text-gray-300 font-mono space-y-4">
-                                <div class="text-gray-500 italic p-8 text-center">
-                                    Click any entry in the file tree on the left to inspect manifest details, package signatures, or class mappings.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Technical Specs Card -->
-                        <div class="mt-6 pt-4 border-t border-sour-500/10 grid grid-cols-3 gap-3 text-center">
-                            <div class="p-2 rounded bg-darkbg/50">
-                                <div class="text-xs text-gray-400">Mixins Config</div>
-                                <div class="text-xs font-bold text-sour-400 font-mono mt-1">sourclient.mixins.json</div>
-                            </div>
-                            <div class="p-2 rounded bg-darkbg/50">
-                                <div class="text-xs text-gray-400">GUI Assets</div>
-                                <div class="text-xs font-bold text-sour-400 font-mono mt-1">Custom TTF &amp; UI Json</div>
-                            </div>
-                            <div class="p-2 rounded bg-darkbg/50">
-                                <div class="text-xs text-gray-400">Mod ID</div>
-                                <div class="text-xs font-bold text-sour-400 font-mono mt-1">sourclient</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Installation Instructions -->
-        <section id="installation" class="py-20">
+        <section id="installation" class="py-20 bg-cardbg/20 border-t border-sour-500/10">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-black text-white">Quick Installation Guide</h2>
@@ -401,7 +345,7 @@
                             3
                         </div>
                         <h3 class="text-lg font-bold text-white mb-2">Launch &amp; Bind</h3>
-                        <p class="text-sm text-gray-400">Launch Minecraft with Fabric profile. Press the default bind key to open the ClickGUI.</p>
+                        <p class="text-sm text-gray-400">Launch Minecraft with Fabric profile. Press Right Shift to open the ClickGUI screen.</p>
                     </div>
                 </div>
             </div>
@@ -418,16 +362,18 @@
                 <span class="text-xs text-gray-500">© 2026 All rights reserved.</span>
             </div>
             <div class="flex items-center space-x-6 text-xs text-gray-400">
+                <a href="https://discord.gg/GqBeTTptM6" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 text-indigo-300 flex items-center gap-1 font-semibold">
+                    <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Discord
+                </a>
                 <span class="hover:text-sour-400 cursor-pointer" onclick="showToast('Fabric 1.21.11 & 26.1.2 Supported')">Fabric Compatible</span>
                 <span class="hover:text-sour-400 cursor-pointer" onclick="showToast('Open ClickGUI with Right Shift')">GUI Help</span>
-                <a href="#structure" class="hover:text-sour-400">ZIP File Manifest</a>
             </div>
         </div>
     </footer>
 
     <!-- Interactive Logic Script -->
     <script>
-        // --- 1. DATA EXTRACTED FROM ZIP ARCHIVE ---
+        // --- MODULE DATA ---
         const moduleCategories = {
             combat: {
                 title: "Combat",
@@ -457,7 +403,6 @@
                 modules: [
                     { name: "AntiVanish", class: "RenderModules$AntiVanish.class", desc: "Detects vanished staff members or hidden players on servers." },
                     { name: "BlockEsp", class: "RenderModules$BlockEsp.class", desc: "Highlights specific designated block IDs through terrain." },
-                    { name: "BlockScan", class: "RenderModules$BlockScan.class", desc: "Scans chunk blocks with hit detection algorithms." },
                     { name: "Blur", class: "RenderModules$Blur.class", desc: "Applies sleek post-processing blur to background UI screens." },
                     { name: "Esp", class: "RenderModules$Esp.class", desc: "Render outline or bounding box around entities through walls." },
                     { name: "Freecam", class: "RenderModules$Freecam.class", desc: "Detaches camera from player body to inspect surroundings freely." },
@@ -466,10 +411,7 @@
                     { name: "NameTags", class: "RenderModules$NameTags.class", desc: "Custom informative nametags displaying armor, health, and distance." },
                     { name: "NightVision", class: "RenderModules$NightVision.class", desc: "Applies permanent full-brightness gamma effect." },
                     { name: "SpawnerEsp", class: "RenderModules$SpawnerEsp.class", desc: "Locates dungeon and structure mob spawners through terrain." },
-                    { name: "StashFinder", class: "RenderModules$StashFinder.class", desc: "Detects high-density chest/shulker clusters in chunks." },
                     { name: "StorageEsp", class: "RenderModules$StorageEsp.class", desc: "Renders colored bounding boxes on chests, shulkers, and hoppers." },
-                    { name: "SusAmethystFinder", class: "RenderModules$SusAmethystFinder.class", desc: "Scans for suspicious amethyst structures or geode features." },
-                    { name: "SusChunkFinder", class: "RenderModules$SusChunkFinder.class", desc: "Tracks unusual chunk generation and player activity markers." },
                     { name: "Tracers", class: "RenderModules$Tracers.class", desc: "Draws direct vector lines from crosshair to nearby entities." },
                     { name: "Xray", class: "RenderModules$Xray.class", desc: "Filters out common blocks to reveal valuable ores and base storage." }
                 ]
@@ -500,7 +442,6 @@
                 bgColor: "bg-sour-500/10",
                 borderColor: "border-sour-500/20",
                 modules: [
-                    { name: "Ambience", class: "NewModules$Ambience.class", desc: "Customizes world time, weather, and atmospheric sky light." },
                     { name: "AnchorMacro", class: "NewModules$AnchorMacro.class", desc: "Automated single-tick Anchor placement macro." },
                     { name: "AntiHunger", class: "NewModules$AntiHunger.class", desc: "Reduces hunger exhaustion packets sent to server." },
                     { name: "AutoBreed", class: "NewModules$AutoBreed.class", desc: "Feeds breeding food to valid nearby animals automatically." },
@@ -512,6 +453,20 @@
                     { name: "GamemodeCreative", class: "NewModules$GamemodeCreative.class", desc: "Client-side creative menu and interaction hooks." },
                     { name: "NoGhostBlocks", class: "NewModules$NoGhostBlocks.class", desc: "Synchronizes broken blocks with server to eliminate ghost blocks." },
                     { name: "PlayerDetect", class: "NewModules$PlayerDetect.class", desc: "Alerts when new players enter visual or chunk render distance." }
+                ]
+            },
+            world: {
+                title: "World",
+                icon: "globe",
+                color: "text-emerald-400",
+                bgColor: "bg-emerald-500/10",
+                borderColor: "border-emerald-500/20",
+                modules: [
+                    { name: "Ambience", class: "NewModules$Ambience.class", desc: "Customizes world time, weather, and atmospheric sky light." },
+                    { name: "BlockScan", class: "RenderModules$BlockScan.class", desc: "Scans chunk blocks with hit detection algorithms." },
+                    { name: "StashFinder", class: "RenderModules$StashFinder.class", desc: "Detects high-density chest/shulker clusters in chunks." },
+                    { name: "SusAmethystFinder", class: "RenderModules$SusAmethystFinder.class", desc: "Scans for suspicious amethyst structures or geode features." },
+                    { name: "SusChunkFinder", class: "RenderModules$SusChunkFinder.class", desc: "Tracks unusual chunk generation and player activity markers." }
                 ]
             },
             misc: {
@@ -527,65 +482,6 @@
                 ]
             }
         };
-
-        // File Structure tree from ZIP contents
-        const fileTreeData = [
-            {
-                name: "META-INF",
-                type: "dir",
-                children: [
-                    { name: "MANIFEST.MF", type: "file", desc: "Manifest version 1.0, Fabric loader entrypoints" }
-                ]
-            },
-            {
-                name: "assets/sourclient",
-                type: "dir",
-                children: [
-                    { name: "icon.png", type: "file", desc: "SourClient Branding Icon PNG (64x64)" },
-                    { name: "font/ui.json", type: "file", desc: "Custom Font Glyph mapping definition" },
-                    { name: "font/ui.ttf", type: "file", desc: "Custom TrueType UI typography asset" },
-                    { name: "font/FONT_LICENSE.txt", type: "file", desc: "Open Font License file" }
-                ]
-            },
-            {
-                name: "com/sourclient",
-                type: "dir",
-                children: [
-                    { name: "SourClient.class", type: "file", desc: "Main Mod Initialization Entrypoint" },
-                    { name: "core/", type: "dir", children: [
-                        { name: "Category.class", type: "file", desc: "Enum defining Module categories" },
-                        { name: "Config.class", type: "file", desc: "JSON Config save/load manager" },
-                        { name: "Module.class", type: "file", desc: "Base abstract class for all modules" },
-                        { name: "ModuleManager.class", type: "file", desc: "Registry holding active module instances" },
-                        { name: "Setting.class", type: "file", desc: "Setting wrapper (Bool, Num, Mode, Color, Blocks)" }
-                    ]},
-                    { name: "gui/", type: "dir", children: [
-                        { name: "ClickGui.class", type: "file", desc: "Interactive ClickGUI screen handler" },
-                        { name: "Hud.class", type: "file", desc: "In-game HUD Overlay renderer" }
-                    ]},
-                    { name: "mixin/", type: "dir", children: [
-                        { name: "MultiPlayerGameModeMixin.class", type: "file", desc: "Hooks into attack/reach and block reach logic" },
-                        { name: "ParticleEngineMixin.class", type: "file", desc: "Hooks into particle generation for visuals" },
-                        { name: "ScreenAccessor.class", type: "file", desc: "Accessor for screen UI elements" }
-                    ]},
-                    { name: "modules/", type: "dir", children: [
-                        { name: "CombatModules.class", type: "file", desc: "Container for Combat inner classes" },
-                        { name: "RenderModules.class", type: "file", desc: "Container for Render inner classes" },
-                        { name: "PlayerModules.class", type: "file", desc: "Container for Player inner classes" },
-                        { name: "NewModules.class", type: "file", desc: "Container for Automation inner classes" },
-                        { name: "MiscModules.class", type: "file", desc: "Container for HUD inner classes" }
-                    ]},
-                    { name: "util/", type: "dir", children: [
-                        { name: "Util.class", type: "file", desc: "Raytrace, Math & Packet Utility methods" }
-                    ]}
-                ]
-            },
-            { name: "fabric.mod.json", type: "file", desc: "Fabric metadata configuration file" },
-            { name: "sourclient.mixins.json", type: "file", desc: "Mixin Transformer configuration definitions" },
-            { name: "LICENSE_sourclient", type: "file", desc: "Client License Agreement" }
-        ];
-
-        // --- 2. RENDER FUNCTIONS ---
 
         // Render Modules Grid
         function renderModules(filterCat = 'all', searchQuery = '') {
@@ -642,68 +538,8 @@
             lucide.createIcons();
         }
 
-        // Render File Tree
-        function renderTree(nodes, container, level = 0) {
-            nodes.forEach(node => {
-                const item = document.createElement('div');
-                const paddingLeft = level * 16;
-                
-                if (node.type === 'dir') {
-                    item.className = 'py-1 hover:text-sour-400 cursor-pointer text-gray-300 flex items-center gap-1.5';
-                    item.style.paddingLeft = `${paddingLeft}px`;
-                    item.innerHTML = `<i data-lucide="folder" class="w-3.5 h-3.5 text-sour-400"></i> <span class="font-bold">${node.name}</span>`;
-                    container.appendChild(item);
-
-                    if (node.children) {
-                        const childContainer = document.createElement('div');
-                        container.appendChild(childContainer);
-                        renderTree(node.children, childContainer, level + 1);
-                    }
-                } else {
-                    item.className = 'py-1 hover:text-sour-400 cursor-pointer text-gray-400 hover:bg-sour-500/5 px-1 rounded flex items-center gap-1.5 transition-colors';
-                    item.style.paddingLeft = `${paddingLeft}px`;
-                    item.innerHTML = `<i data-lucide="file" class="w-3.5 h-3.5 text-gray-500"></i> <span>${node.name}</span>`;
-                    item.onclick = (e) => {
-                        e.stopPropagation();
-                        inspectFile(node);
-                    };
-                    container.appendChild(item);
-                }
-            });
-        }
-
-        // Inspect Selected File
-        function inspectFile(node) {
-            document.getElementById('selected-file-tag').textContent = node.name;
-            const content = document.getElementById('inspector-content');
-
-            content.innerHTML = `
-                <div class="bg-darkbg p-4 rounded-xl border border-sour-500/20 space-y-3">
-                    <div class="flex items-center gap-2 text-sour-400 font-bold border-b border-sour-500/10 pb-2">
-                        <i data-lucide="file-check" class="w-4 h-4"></i> ${node.name}
-                    </div>
-                    <div>
-                        <span class="text-xs text-gray-500 uppercase tracking-wider block mb-1">Description / Spec:</span>
-                        <p class="text-gray-200 text-xs">${node.desc || "Compiled Java Class / Bytecode Resource"}</p>
-                    </div>
-                    <div class="grid grid-cols-2 gap-2 pt-2 text-xs">
-                        <div class="bg-cardbg p-2 rounded border border-sour-500/10">
-                            <span class="text-gray-500 block">Package:</span>
-                            <span class="text-gray-300">com.sourclient.*</span>
-                        </div>
-                        <div class="bg-cardbg p-2 rounded border border-sour-500/10">
-                            <span class="text-gray-500 block">Status:</span>
-                            <span class="text-sour-400">Verified Zip Entry</span>
-                        </div>
-                    </div>
-                </div>
-            `;
-            lucide.createIcons();
-        }
-
         // Mock Download Trigger
         function downloadJar(filename, version) {
-            // Create dummy downloadable blob
             const dummyContent = `SourClient Minecraft Mod File - Version ${version}\nBuilt for Fabric Loader.\nFilename: ${filename}`;
             const blob = new Blob([dummyContent], { type: 'application/java-archive' });
             const url = URL.createObjectURL(blob);
@@ -738,14 +574,10 @@
             }, 3500);
         }
 
-        // --- 3. EVENT LISTENERS & INIT ---
+        // --- EVENT LISTENERS & INIT ---
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
             renderModules('all');
-
-            // Tree View Setup
-            const treeContainer = document.getElementById('file-tree');
-            renderTree(fileTreeData, treeContainer);
 
             // Tab Filters
             const tabs = document.querySelectorAll('.cat-tab');
